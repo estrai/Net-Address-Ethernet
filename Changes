@@ -1,0 +1,102 @@
+2008-09-06  Kingpin  <Martin@BLUEMAX>
+
+	* lib/Net/Address/Ethernet.pm (get_address): removed undef warning
+
+2008-02-23    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (get_addresses): now returns multiple IP addresses in rasIP hash entry
+
+2007-12-06    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm: now uses Net::Ifconfig::Wrapper (and works on all my test systems)
+
+2007-11-24    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (_cmd_output_matches): should now match ifconfig on freebsd
+
+2007-11-23    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (_cmd_output_matches): should now match Portugese Linux
+
+2007-11-11    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm: fixed ipconfig parser for Vista(?)
+
+2007-10-25    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (_cmd_output_matches): updated for darwin, and fixed backward for solaris
+
+2007-10-20    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (get_addresses): added block for cygwin
+	(_cmd_output_matches): added patterns for darwin (not tested)
+
+2007-01-02    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (_parse_ipconfig_output): tweak patterns for foreign-language DOS
+
+2006-12-29    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (get_addresses): new method
+
+2006-09-23    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (get_address): if multiple active adapters, just return the first one
+
+2006-07-20    <Daddy@C-3PO>
+
+	* Ethernet.pm (get_address): more ways of finding the hostname
+
+2006-07-08    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm (get_address): now able to find ipconfig outside of PATH
+
+2005-09-23    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm: turn off debugging!
+	(method): update pod
+
+2005-08-03    <Daddy@C-3PO>
+
+	* lib/Net/Address/Ethernet.pm: now uses Regexp::Common
+
+2004-11-13  Kingpin  <mthurn@verizon.net>
+
+	* lib/Net/Address/Ethernet.pm (get_address): add patterns for German Windows ipconfig
+
+2004-11-10  Kingpin  <mthurn@verizon.net>
+
+	* lib/Net/Address/Ethernet.pm (get_address): on Win32, if no adapter is active and one address found, return that address
+
+2004-07-14  Kingpin  <mthurn@verizon.net>
+
+	* lib/Net/Address/Ethernet.pm (get_address): MacOS support added by Brian Hayward
+
+2004-02-09  Kingpin  <mthurn@verizon.net>
+
+	* lib/Net/Address/Ethernet.pm (get_address): fix linux command locations
+
+2004-02-05  Kingpin  <mthurn@verizon.net>
+
+	* lib/Net/Address/Ethernet.pm (get_address): do not execute if program doesn't exist
+
+2004-02-04  Kingpin  <mthurn@verizon.net>
+
+	* lib/Net/Address/Ethernet.pm (get_address): if arp fails on solaris, try ifconfig
+
+2004-01-22  Kingpin  <mthurn@verizon.net>
+
+	* Ethernet.pm (get_address): if arp fails on linux, try ifconfig
+
+2003-12-12  Kingpin  <mthurn@verizon.net>
+
+	* Ethernet.pm (is_address): new function
+	(canonical): new function
+
+2003-11-29  Kingpin  <mthurn@verizon.net>
+
+	* Ethernet.pm (get_address): new array-context return value
+
+2003-11-26  Kingpin  <mthurn@verizon.net>
+
+	* Ethernet.pm: first public release
